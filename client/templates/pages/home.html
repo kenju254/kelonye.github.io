@@ -1,0 +1,18 @@
+<section class="home"><div class="row"><h1>We are a solutions company based in Nairobi.</h1><h3>We offer services in networking, web and software developement.</h3></div><div id="gallery" class="row"><div id="slider">{{collection App.ProjectSliderView contentBinding="projects"}}</div></div><div class="row"><div class="span8 offset2"><blockquote>{{#with tweets.firstObject}}<p> 
+<a {{bindAttr href="uri"}}>{{text}}</a></p>&mdash; {{from_user_name}} &nbsp;<a href="https://twitter.com/kelonye" data-show-count="false" data-show-screen-name="false" class="twitter-follow-button">Follow @kelonye</a>{{/with}}</blockquote></div></div><script type="text/javascript">
+(function() {
+
+  (function(d, s, id) {
+    var fjs, js;
+    js = void 0;
+    fjs = d.getElementsByTagName(s)[0];
+    if (!d.getElementById(id)) {
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//platform.twitter.com/widgets.js";
+      return fjs.parentNode.insertBefore(js, fjs);
+    }
+  })(document, "script", "twitter-wjs");
+
+}).call(this);
+</script></section>

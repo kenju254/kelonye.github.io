@@ -1,0 +1,13 @@
+.container
+  .navbar
+    .navbar-inner
+      .container
+        a.brand(href="#/")
+          img(src="build/client/img/logo.png")
+
+        | {{collection App.Nav class="nav pull-right" contentBinding="content" selectedBinding="selected"}}
+
+  | {{outlet}}
+  
+  #footer.row
+    | &copy; 2012 Exxaro Ventures
