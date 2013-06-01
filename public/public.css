@@ -7,11 +7,11 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 
 @font-face {
   font-family: 'codropsicons';
-  src:url(".//app/css/../fonts/codropsicons.eot");
-  src:url(".//app/css/../fonts/codropsicons.eot?#iefix") format('embedded-opentype'),
-    url(".//app/css/../fonts/codropsicons.woff") format('woff'),
-    url(".//app/css/../fonts/codropsicons.ttf") format('truetype'),
-    url(".//app/css/../fonts/codropsicons.svg#codropsicons") format('svg');
+  src:url("/app/css/../fonts/codropsicons.eot");
+  src:url("/app/css/../fonts/codropsicons.eot?#iefix") format('embedded-opentype'),
+    url("/app/css/../fonts/codropsicons.woff") format('woff'),
+    url("/app/css/../fonts/codropsicons.ttf") format('truetype'),
+    url("/app/css/../fonts/codropsicons.svg#codropsicons") format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -19,11 +19,11 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 
 @font-face {
   font-family: 'icomoon';
-  src:url(".//app/css/../fonts/icomoon.eot");
-  src:url(".//app/css/../fonts/icomoon.eot?#iefix") format('embedded-opentype'),
-    url(".//app/css/../fonts/icomoon.woff") format('woff'),
-    url(".//app/css/../fonts/icomoon.ttf") format('truetype'),
-    url(".//app/css/../fonts/icomoon.svg#icomoon") format('svg');
+  src:url("/app/css/../fonts/icomoon.eot");
+  src:url("/app/css/../fonts/icomoon.eot?#iefix") format('embedded-opentype'),
+    url("/app/css/../fonts/icomoon.woff") format('woff'),
+    url("/app/css/../fonts/icomoon.ttf") format('truetype'),
+    url("/app/css/../fonts/icomoon.svg#icomoon") format('svg');
   font-weight: normal;
   font-style: normal;
 }
