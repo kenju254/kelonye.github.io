@@ -1,36 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <head>
-    <title>~|~</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio">
-    <meta name="keywords" content="mitchel, kelonye, github, portfolio">
-    <meta name="google-site-verification" content="">
+    <title>Portfolio « Mitchel Kelonye</title>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name='description' content='Portfolio'>
+    <meta name='keywords' content='mitchel, kelonye, github, portfolio'>
+    <link rel='shortcut icon' href='images/favicon.ico'>
     <style>
-      body {
-        text-align: center;
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        font-family: "URW Gothic L", "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 15px;
-        padding: 5px 200px;
+        color: #adafb3;
       }
-      header{
-        text-align: right;
-        margin: 0 0 20px 0;
+      h1{
+        font-size: 30px;
+        font-weight: normal;
+        line-height: 38px;
       }
-      header a{
-        color: #555;
-        margin-left: 10px;
+      #page{
+        width: 940px;
+        height: auto;
+        margin: 50px auto;
+      }
+      #content span,
+      #content a,
+      #content a:visited{
+        color: #777;
         text-decoration: none;
+      }
+      #content h1{
+        margin: 50px 0;
+      }
+      #content img{
+        border-radius: 2px;
+        transition: 100s;
+        box-shadow: 0 0 10px rgba(0,0,0,.5), 0 10px 10px rgba(0,0,0,.1)
+      }
+      #content ol li{
+        list-style: none;
+        display: inline-block;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      #content ol li img{
+        width: 10pc;
+        list-style: none;
+        opacity: .8;
+        border-radius: 2px;
       }
     </style>
   </head>
   <body>
-    
-    <header >
-      <a href="http://twitter.com/kelonye/" target="external">twitter</a>
-      <a href="http://github.com/kelonye/" target="external">github</a>
-    </header>
 
+    <div id='page'>
+      <div id='header'>
+        <img src='images/logo.png' />
+      </div>
+      <div id='content'>
+        <div><h1>Hi, am <span>Mitchel Kelonye</span>, a web developer from Nairobi, and am currently available for consultancy in <a href='http://django-project.com' target='external'>django</a>, <a href='http://nodejs.org' target='external'>node.js</a> and <a href='http://emberjs.com' target='external'>ember.js</a>. You can reach me through <a href='http://twitter.com/kelonye' target='external'>twitter</a>, <a href='mailto:kelonyemitchel@gmail.com' target='external'>email</a> or <span>skype(@kelonye)</span>.</h1></div>
+        <div><h1>{{portfolio}}</h1></div>
+        <div id='fore'>
+          <a href='http://pitchas-kelonye.rhcloud.com' target='external'>
+          <img src='images/pitchas-app.png' />
+          </a>
+        </div>
+        <br><br>
+        <div>
+          <ol>
+            <li><img data-href='http://pitchas-kelonye.rhcloud.com' src='images/pitchas-app.png' /></li>
+            <li><img data-href='http://places-kelonye.rhcloud.com' src='images/places-app.png' /></li>
+          </ol>
+        </div>
+        <div>
+          <h1>&copy; <i id='year'></i> kelonye</h1>
+        </div>
+      </div>
+    </div>
+    <script>
+      var fore = document.getElementById('fore');
+      var imgs = document.querySelectorAll('ol img');
+      var n = imgs.length;
+      var img;
+      var onclick = function(e){
+        var href = e.target.dataset.href;
+        var src = e.target.src;
+        var html = '';
+        html += '<a href="'+href+'" target="external">';
+        html += '<img src="'+src+'" />';
+        html += '</a>';
+        fore.innerHTML = html;
+      }
+      while (n--){
+        img = imgs[n];
+        img.onclick = onclick;
+      }
+      var now = new Date;
+      var year = now.getUTCFullYear();
+      var yearEl = document.getElementById('year');
+      yearEl.innerHTML = year;
+    </script>
   </body>
 </html>
